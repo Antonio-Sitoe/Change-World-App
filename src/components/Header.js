@@ -2,6 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { HeaderStyle } from '../styles/styles';
 import Logo from '../assets/logo.png';
+import { IoMdNotifications } from 'react-icons/io';
+import {
+  BsFillPersonFill,
+  BsMessenger,
+  BsFillPersonLinesFill,
+} from 'react-icons/bs';
 
 const Header = () => {
   const nav = React.useRef();
@@ -37,16 +43,29 @@ const Header = () => {
           </button>
           <ul id='menu' role='menu'>
             <li>
-              <Link to=''>Minhas Denuncias</Link>
+              <Link to=''>
+                <BsFillPersonLinesFill />
+                Empresas
+              </Link>
             </li>
             <li>
-              <Link to=''>Sobre</Link>
+              <Link to='publica'>
+                <BsMessenger />
+                Mensagens
+              </Link>
             </li>
             <li>
-              <Link to=''>Contato</Link>
+              <Link to='publica'>
+                <IoMdNotifications />
+                Notificacoes
+              </Link>
             </li>
+
             <li>
-              <Link to=''>Perfil</Link>
+              <Link to='conta'>
+                <BsFillPersonFill />
+                Meu Perfil
+              </Link>
             </li>
           </ul>
         </nav>

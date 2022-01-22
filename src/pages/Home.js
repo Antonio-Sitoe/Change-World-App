@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import Header from '../components/Header.js';
-import { HomePage } from '../styles/styles';
+import { Card, HomePage } from '../styles/styles';
 import Perfil from '../assets/perfil.jpg';
 import { PostContext } from '../context/PostContext';
 import { AiOutlineLike, AiOutlineMessage } from 'react-icons/ai';
@@ -39,51 +39,49 @@ export function Home() {
 
         <main>
           <div className='makePost'>
-            <h1>Em que podemos ajudar voce hoje ?</h1>
             <input type='text' placeholder='Pesquise por qualquer coisa...' />
             <ul>
               <li>
-                <a href='' onClick={openModal}>
+                <Link to='' onClick={openModal}>
                   <BsFillTelephoneFill />
                   Denuncias.
-                </a>{' '}
+                </Link>{' '}
               </li>
               <li>
-                <a href='' onClick={openModal}>
+                <Link to='' onClick={openModal}>
                   {' '}
                   <FaHandsHelping /> Pedir Ajuda.
-                </a>{' '}
+                </Link>{' '}
               </li>
               <li>
-                <a href='' onClick={openModal}>
+                <Link to='' onClick={openModal}>
                   <FaMoneyBillWaveAlt /> Pedir Financiador.
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='' onClick={openModal}>
+                <Link to='' onClick={openModal}>
                   <GiTalk /> Publicar ideias.
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
-          <hr />
           <section>
             {post.map((item, i) => {
               return (
-                <div className='post' key={i}>
-                  <div className='header'>
+                <Card key={i}>
+                  <Link to='outrem' className='header'>
                     <img src={item.user.foto} alt='perfil' />
                     <div>
                       <h3>{item.user.nome}</h3>
                       <p>{item.user.sobre}</p>
                     </div>
-                  </div>
+                  </Link>
                   <div className='sobre'>
                     {item.post.sobre.map((item, i) => (
                       <p key={i}>{item}</p>
                     ))}
                   </div>
-                  <div className='foto'>400 x 600</div>
+                  <img src={item.post.foto} className='foto' alt='' />
                   <div>
                     <div className='comentarios'>
                       <button>
@@ -96,7 +94,7 @@ export function Home() {
                       </button>
                     </div>
                   </div>
-                </div>
+                </Card>
               );
             })}
           </section>
@@ -104,7 +102,7 @@ export function Home() {
         </main>
 
         <footer>
-          <h2>Filtro</h2>
+          <h3>Filtro</h3>
           <ul>
             <li>
               <label htmlFor=''>
@@ -129,6 +127,18 @@ export function Home() {
                 <input type='checkbox' name='' id='' />
                 Publicar ideias
               </label>
+            </li>
+          </ul>
+          <h3>Sobre Academia</h3>
+          <ul className='enfate'>
+            <li>
+              <Link to=''>Academia de pesquisa</Link>
+            </li>
+            <li>
+              <Link to=''>Entre em Contato</Link>
+            </li>
+            <li>
+              <Link to=''>Perguntas frequentes</Link>
             </li>
           </ul>
         </footer>

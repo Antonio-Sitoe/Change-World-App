@@ -4,6 +4,9 @@ import { GlobalStyle } from './styles/styles';
 import Login from './pages/Login';
 import { PostStorage } from './context/PostContext';
 import { HomeDefault, Home } from './pages/Home';
+import Account from './pages/Account';
+import AccountOutrem from './pages/AccountOutrem';
+import Publica from './pages/Publica';
 
 const App = () => {
   return (
@@ -13,6 +16,9 @@ const App = () => {
           <Route path='' element={<Login />} />
           <Route path='App' element={<HomeDefault />}>
             <Route path='' element={<Home />} />
+            <Route path='conta' element={<Account />} />
+            <Route path='outrem' element={<AccountOutrem />} />
+            <Route path='publica' element={<Publica />} />
           </Route>
         </Routes>
       </PostStorage>

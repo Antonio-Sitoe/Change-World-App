@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, keyframes } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -30,7 +30,6 @@ html {
      width: 100%;
    }
 `;
-
 export const HeaderStyle = styled.header`
   box-sizing: border-box;
   height: 70px;
@@ -56,15 +55,22 @@ export const HeaderStyle = styled.header`
 
     #menu {
       display: flex;
+      align-items: center;
       list-style: none;
       gap: 0.5rem;
     }
 
     #menu a {
-      display: block;
       color: #252525;
 
       padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &:hover {
+        background: #f8f8f8;
+      }
     }
 
     #btn-mobile {
@@ -132,9 +138,7 @@ export const HeaderStyle = styled.header`
     }
   }
 `;
-
 export const HomePage = styled.main`
-  background: whitesmoke;
   width: 100%;
   height: 100%;
   padding-bottom: 3rem;
@@ -150,6 +154,7 @@ export const HomePage = styled.main`
     gap: 1rem;
 
     aside {
+      border: 1px solid whitesmoke;
       flex: 0 1 15rem;
       display: grid;
       gap: 1rem;
@@ -168,6 +173,7 @@ export const HomePage = styled.main`
     main {
       flex: 1;
       .makePost {
+        border: 1px solid whitesmoke;
         display: grid;
         gap: 1rem;
         background: white;
@@ -181,9 +187,9 @@ export const HomePage = styled.main`
 
         input {
           padding: 1rem;
-          border: 1px solid #929090;
+          border: 1px solid #dbd9d9;
           border-radius: 2px;
-          background: whitesmoke;
+          background: #fefefe;
         }
 
         ul {
@@ -198,73 +204,14 @@ export const HomePage = styled.main`
               gap: 0.6rem;
               display: flex;
               align-items: center;
+              flex-direction: column;
+              text-align: center;
+
               cursor: pointer;
-              padding: 1rem;
-              background: whitesmoke;
+              padding: 0.3rem 0;
 
               svg {
                 fill: #fba82f;
-                width: 30px;
-                height: 30px;
-              }
-            }
-          }
-        }
-      }
-      section {
-        margin-top: 1rem;
-        display: grid;
-        gap: 1rem;
-        .post {
-          background: white;
-          padding: 1rem;
-          border-radius: 2px;
-          display: grid;
-          gap: 1rem;
-
-          .header {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            img {
-              max-width: 4rem;
-              border-radius: 50%;
-            }
-          }
-          .sobre {
-            p {
-              margin: 0.6rem 0;
-              line-height: 1.5;
-            }
-          }
-
-          .foto {
-            width: 100%;
-            height: 200px;
-            background: whitesmoke;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          .comentarios {
-            border-top: 1px solid #e4e0e0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-
-            button {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              gap: 1rem;
-
-              margin-top: 1rem;
-              background: white;
-              cursor: pointer;
-              border: none;
-              padding: 1rem;
-
-              svg {
                 width: 30px;
                 height: 30px;
               }
@@ -275,6 +222,11 @@ export const HomePage = styled.main`
             }
           }
         }
+      }
+      section {
+        margin-top: 1rem;
+        display: grid;
+        gap: 1rem;
       }
     }
 
@@ -296,15 +248,37 @@ export const HomePage = styled.main`
           }
         }
       }
+
+      .enfate {
+        li {
+          a {
+            color: #c27c14;
+            text-decoration: underline;
+          }
+          display: flex;
+          align-items: center;
+
+          &::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #fba82f;
+            margin-right: 0.4rem;
+            border-radius: 50%;
+          }
+        }
+      }
     }
 
     .btnResultado {
       padding: 1rem;
+      width: 100%;
       margin: 2rem auto;
       background: #fba82f;
       color: #fefefe;
-      border: 2px solid #c27c14;
+      border: none;
       border-radius: 2px;
+      cursor: pointer;
     }
 
     @media (max-width: 900px) {
@@ -357,7 +331,6 @@ export const HomePage = styled.main`
     }
   }
 `;
-
 export const LoginPage = styled.main`
   display: flex;
   align-items: center;
@@ -399,5 +372,187 @@ export const LoginPage = styled.main`
     @media (max-width: 500px) {
       box-shadow: none;
     }
+  }
+`;
+const animeLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to { opacity: 1;
+    transform: translateX(0);
+
+  }
+
+`;
+export const AccountPage = styled.main`
+  max-width: 800px;
+  margin: 5rem auto;
+  background: whitesmoke;
+
+  .foto {
+    background: rgb(131, 58, 180);
+    background: linear-gradient(
+      90deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(253, 29, 29, 1) 50%,
+      rgba(252, 176, 69, 1) 100%
+    );
+    border-radius: 2px;
+    position: relative;
+    height: 15rem;
+    margin-bottom: 7rem;
+
+    img {
+      max-width: 15rem;
+      position: absolute;
+      bottom: -5rem;
+      left: 5rem;
+      border: 3px solid white;
+      border-radius: 50%;
+
+      @media (max-width: 350px) {
+        left: 0;
+        bottom: -2rem;
+        position: initial;
+        margin: 0 auto;
+      }
+    }
+    @media (max-width: 350px) {
+      margin-bottom: 4rem;
+    }
+  }
+  .sobres {
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .lista {
+    border: 4px solid whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    align-content: space-between;
+
+    li {
+      button {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        font-weight: bold;
+        background: white;
+        cursor: pointer;
+      }
+
+      a {
+        width: 100%;
+        color: white;
+        padding: 1rem;
+        background: #fba82f;
+      }
+    }
+  }
+  section {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding-bottom: 3rem;
+  }
+`;
+export const Card = styled.div`
+  border: 1px solid whitesmoke;
+  animation: ${animeLeft} 0.3s;
+  background: white;
+  padding: 1rem;
+  border-radius: 2px;
+  display: grid;
+  gap: 1rem;
+
+  .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    img {
+      max-width: 4rem;
+      border-radius: 50%;
+    }
+  }
+  .sobre {
+    p {
+      margin: 0.6rem 0;
+      line-height: 1.5;
+    }
+  }
+
+  .foto {
+    width: 100%;
+    height: 300px;
+  }
+  .comentarios {
+    border-top: 1px solid #e4e0e0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      margin-top: 1rem;
+      background: white;
+      cursor: pointer;
+      border: none;
+      padding: 1rem;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      &:hover {
+        background: whitesmoke;
+      }
+    }
+  }
+`;
+
+export const Publicastyle = styled.main`
+  max-width: 600px;
+  margin: 8rem auto;
+
+  section {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding-bottom: 3rem;
+  }
+`;
+
+export const CardDenuncia = styled.div`
+  background: white;
+  padding: 1rem;
+  display: grid;
+  gap: 0.6rem;
+  animation: ${animeLeft} 0.3s;
+
+  span {
+    font-size: 0.8rem;
+    color: grey;
+  }
+
+  button {
+    padding: 0.6rem;
+    background: #fba82f;
+    border: none;
+    color: whitesmoke;
+    max-width: 6rem;
+    width: 100%;
+    border-radius: 2px;
   }
 `;
