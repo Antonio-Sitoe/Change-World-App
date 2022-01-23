@@ -8,6 +8,7 @@ import { AiOutlineLike, AiOutlineMessage } from 'react-icons/ai';
 import { FaHandsHelping, FaMoneyBillWaveAlt } from 'react-icons/fa';
 import { GiTalk } from 'react-icons/gi';
 import { BsFillTelephoneFill } from 'react-icons/bs';
+import Modal from '../components/Modal.js';
 
 export function HomeDefault() {
   return (
@@ -25,7 +26,7 @@ export function Home() {
 
   function openModal(e) {
     e.preventDefault();
-    setTitle(e.target.innerText);
+    setTitle(e.currentTarget.innerText);
     setModal(!modal);
   }
   return (
@@ -143,23 +144,7 @@ export function Home() {
           </ul>
         </footer>
       </div>
-
-      {modal && (
-        <div className='modalbg'>
-          <div className='modal'>
-            <h1>{title}</h1>
-            <textarea
-              name=''
-              id=''
-              cols='30'
-              rows='10'
-              placeholder={'No que voce esta pensando?'}
-            />
-            <input type='file' name='' id='' />
-            <button onClick={() => setModal(false)}>Publicar</button>
-          </div>
-        </div>
-      )}
+      {modal && <Modal title={title} setModal={setModal} />}
     </HomePage>
   );
 }

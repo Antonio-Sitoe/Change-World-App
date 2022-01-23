@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { animeLeft } from './styles';
 
 export const StyleMessage = styled.main`
@@ -18,11 +18,10 @@ export const StyleMessage = styled.main`
   @media (max-width: 660px) {
     grid-template-columns: 1fr;
     box-shadow: none;
-   
+
     margin: 4rem auto 0 auto;
   }
 `;
-
 export const List = styled.ul`
   display: grid;
   gap: 0.3rem;
@@ -68,7 +67,6 @@ export const List = styled.ul`
     }
   }
 `;
-
 export const MessageBox = styled.ul`
   border: 2px solid #fba82f;
   padding: 1rem;
@@ -79,7 +77,7 @@ export const MessageBox = styled.ul`
     display: none;
   }
   @media (max-width: 660px) {
-     height: 90vh;
+    height: 90vh;
     border: none;
     .back {
       display: block;
@@ -144,4 +142,119 @@ export const MessageBox = styled.ul`
       }
     }
   }
+`;
+export const ModalStyle = styled.section`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+
+  .modal {
+    position: relative;
+    span.close {
+      cursor: pointer;
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
+      width: 3rem;
+      height: 3rem;
+      background: #fba82f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      border-radius: 50%;
+      @media (max-width: 660px) {
+        top: 0;
+        right: 0;
+      }
+    }
+    z-index: 1000;
+    margin: 4rem 2rem;
+    display: grid;
+    padding: 3rem;
+    border-radius: 2px;
+    max-width: 1200px;
+    width: 100%;
+    background: white;
+    gap: 1rem;
+    textarea {
+      padding: 1rem;
+      border: 1px solid whitesmoke;
+    }
+
+    button {
+      padding: 1rem;
+      cursor: pointer;
+      border: none;
+      color: white;
+      background: #fba82f;
+    }
+    @media (max-width: 660px) {
+      margin: 0;
+      height: 100%;
+    }
+  }
+`;
+
+export const Cartes = styled.ul`
+  margin: 2rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fba82f;
+    padding: 4rem 0;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+    &:hover {
+      background: whitesmoke;
+    }
+    @media (max-width: 660px) {
+      padding: 2rem;
+    }
+  }
+`;
+
+const animeDown = keyframes`
+  
+  from {
+    opacity: 0;
+    transform: translate3d(0,-10px,0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+`;
+export const Denu = styled.div`
+  display: grid;
+  gap: 1rem;
+  animation: 0.6s ${animeDown};
+
+  input[type='number'] {
+    width: 5rem;
+    padding: 0.6rem;
+  }
+  p {
+    font-weight: bold;
+  }
+`;
+
+export const Help = styled.main`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `;

@@ -299,42 +299,6 @@ export const HomePage = styled.main`
       }
     }
   }
-
-  .modalbg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    .modal {
-      margin: 0.6rem;
-      display: grid;
-      padding: 3rem;
-      border-radius: 2px;
-      max-width: 600px;
-      width: 100%;
-      background: white;
-      gap: 1rem;
-      textarea {
-        padding: 1rem;
-        border: 1px solid whitesmoke;
-      }
-
-      button {
-        padding: 1rem;
-        cursor: pointer;
-        border: none;
-        color: white;
-        background: #fba82f;
-      }
-    }
-  }
 `;
 export const LoginPage = styled.main`
   display: flex;
@@ -594,3 +558,4 @@ export const CardDenuncia = styled.div`
     border-radius: 2px;
   }
 `;
+
