@@ -6,6 +6,8 @@
     ".gitignore": true,
     "package.json": true,
     "package-lock.json": true,
-    "public": true
+    "public": true,
+    ".gitattributes": true,
+    "TdR_Hackathon_Change.pdf": true,
   }
 }

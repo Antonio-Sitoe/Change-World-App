@@ -62,11 +62,16 @@ export const HeaderStyle = styled.header`
 
     #menu a {
       color: #252525;
+      border-radius: 2px;
 
       padding: 0.5rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
+
+      svg {
+        fill: #fba82f;
+      }
 
       &:hover {
         background: #f8f8f8;
@@ -388,7 +393,7 @@ const animeLeft = keyframes`
 export const AccountPage = styled.main`
   max-width: 800px;
   margin: 5rem auto;
-  background: whitesmoke;
+  /* background: whitesmoke; */
 
   .foto {
     background: rgb(131, 58, 180);
@@ -444,6 +449,10 @@ export const AccountPage = styled.main`
         font-weight: bold;
         background: white;
         cursor: pointer;
+
+        &:first-child {
+          border-right: 4px solid whitesmoke;
+        }
       }
 
       a {
@@ -457,7 +466,6 @@ export const AccountPage = styled.main`
   section {
     display: grid;
     gap: 1rem;
-    max-width: 600px;
     margin: 2rem auto;
     padding-bottom: 3rem;
   }
@@ -523,14 +531,39 @@ export const Card = styled.div`
 
 export const Publicastyle = styled.main`
   max-width: 600px;
-  margin: 8rem auto;
+  margin: 7rem auto;
+  padding: 1rem;
+
+  .p {
+    margin: 1rem 0;
+  }
 
   section {
     display: grid;
     gap: 1rem;
-    max-width: 600px;
-    margin: 2rem auto;
+    margin: 2rem 0;
+
     padding-bottom: 3rem;
+    padding: 1rem;
+    border: 1px solid whitesmoke;
+
+    .notificacao {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      border-radius: 2px;
+
+      img {
+        max-width: 4rem;
+        border-radius: 50%;
+      }
+      border-bottom: 1px solid whitesmoke;
+      &:hover {
+        background: whitesmoke;
+      }
+    }
   }
 `;
 
@@ -539,6 +572,7 @@ export const CardDenuncia = styled.div`
   padding: 1rem;
   display: grid;
   gap: 0.6rem;
+  border: 1px solid whitesmoke;
   animation: ${animeLeft} 0.3s;
 
   span {

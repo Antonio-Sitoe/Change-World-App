@@ -6,7 +6,6 @@ import { IoMdNotifications } from 'react-icons/io';
 import {
   BsFillPersonFill,
   BsMessenger,
-  BsFillPersonLinesFill,
 } from 'react-icons/bs';
 
 const Header = () => {
@@ -42,12 +41,6 @@ const Header = () => {
             <span id='hamburger'></span>
           </button>
           <ul id='menu' role='menu'>
-            <li>
-              <Link to=''>
-                <BsFillPersonLinesFill />
-                Empresas
-              </Link>
-            </li>
             <li>
               <Link to='publica'>
                 <BsMessenger />
