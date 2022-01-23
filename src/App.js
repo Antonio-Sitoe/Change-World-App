@@ -7,6 +7,7 @@ import { HomeDefault, Home } from './pages/Home';
 import Account from './pages/Account';
 import AccountOutrem from './pages/AccountOutrem';
 import Publica from './pages/Publica';
+import Message from './pages/Message';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Route path='conta' element={<Account />} />
             <Route path='outrem' element={<AccountOutrem />} />
             <Route path='publica' element={<Publica />} />
+            <Route path='message' element={<Message />} />
           </Route>
         </Routes>
       </PostStorage>

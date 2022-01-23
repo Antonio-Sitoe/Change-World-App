@@ -2,11 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { HeaderStyle } from '../styles/styles';
 import Logo from '../assets/logo.png';
-import { IoMdNotifications } from 'react-icons/io';
-import {
-  BsFillPersonFill,
-  BsMessenger,
-} from 'react-icons/bs';
+import { IoMdNotifications, IoIosHome } from 'react-icons/io';
+import { BsFillPersonFill, BsMessenger } from 'react-icons/bs';
 
 const Header = () => {
   const nav = React.useRef();
@@ -22,6 +19,14 @@ const Header = () => {
       event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
     }
   }
+
+  React.useEffect(() => {
+    const li = nav.current.querySelectorAll('li');
+    li.forEach((item) => {
+      console.log();
+      item.addEventListener('click', toggleMenu);
+    });
+  }, [nav]);
   return (
     <HeaderStyle>
       <div>
@@ -42,7 +47,13 @@ const Header = () => {
           </button>
           <ul id='menu' role='menu'>
             <li>
-              <Link to='publica'>
+              <Link to='/App'>
+                <IoIosHome />
+                Pagina inicial
+              </Link>
+            </li>
+            <li>
+              <Link to='message'>
                 <BsMessenger />
                 Mensagens
               </Link>

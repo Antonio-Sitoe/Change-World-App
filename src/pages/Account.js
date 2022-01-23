@@ -67,7 +67,7 @@ const Account = () => {
                           <p key={i}>{item}</p>
                         ))}
                       </div>
-                      <img src={item.post.foto} className='foto' alt='' />
+                      <img src={item.post.foto} className='pick' alt='' />
                       <div>
                         <div className='comentarios'>
                           <button>

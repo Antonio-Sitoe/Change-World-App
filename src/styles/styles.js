@@ -379,7 +379,7 @@ export const LoginPage = styled.main`
     }
   }
 `;
-const animeLeft = keyframes`
+export const animeLeft = keyframes`
   from {
     opacity: 0;
     transform: translateX(-20px);
@@ -393,81 +393,82 @@ const animeLeft = keyframes`
 export const AccountPage = styled.main`
   max-width: 800px;
   margin: 5rem auto;
-  /* background: whitesmoke; */
+  div {
+    .foto {
+      background: rgb(131, 58, 180);
+      background: linear-gradient(
+        90deg,
+        rgba(131, 58, 180, 1) 0%,
+        rgba(253, 29, 29, 1) 50%,
+        rgba(252, 176, 69, 1) 100%
+      );
+      border-radius: 2px;
+      position: relative;
+      height: 15rem;
+      margin-bottom: 7rem;
 
-  .foto {
-    background: rgb(131, 58, 180);
-    background: linear-gradient(
-      90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(253, 29, 29, 1) 50%,
-      rgba(252, 176, 69, 1) 100%
-    );
-    border-radius: 2px;
-    position: relative;
-    height: 15rem;
-    margin-bottom: 7rem;
+      img {
+        max-width: 15rem;
+        position: absolute;
+        bottom: -5rem;
+        left: 5rem;
+        border: 3px solid white;
+        border-radius: 50%;
 
-    img {
-      max-width: 15rem;
-      position: absolute;
-      bottom: -5rem;
-      left: 5rem;
-      border: 3px solid white;
-      border-radius: 50%;
-
-      @media (max-width: 350px) {
-        left: 0;
-        bottom: -2rem;
-        position: initial;
-        margin: 0 auto;
-      }
-    }
-    @media (max-width: 350px) {
-      margin-bottom: 4rem;
-    }
-  }
-  .sobres {
-    text-align: center;
-    display: grid;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  .lista {
-    border: 4px solid whitesmoke;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    align-items: center;
-    align-content: space-between;
-
-    li {
-      button {
-        width: 100%;
-        padding: 1rem;
-        border: none;
-        font-weight: bold;
-        background: white;
-        cursor: pointer;
-
-        &:first-child {
-          border-right: 4px solid whitesmoke;
+        @media (max-width: 350px) {
+          left: 0;
+          bottom: -2rem;
+          position: initial;
+          margin: 0 auto;
         }
       }
-
-      a {
-        width: 100%;
-        color: white;
-        padding: 1rem;
-        background: #fba82f;
+      @media (max-width: 350px) {
+        margin-bottom: 4rem;
       }
     }
-  }
-  section {
-    display: grid;
-    gap: 1rem;
-    margin: 2rem auto;
-    padding-bottom: 3rem;
+    .sobres {
+      text-align: center;
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .lista {
+      border: 4px solid whitesmoke;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items: center;
+      align-content: space-between;
+
+      li {
+        a {
+          display: block;
+          width: 100%;
+          color: white;
+          padding: 1rem;
+          background: #fba82f;
+          text-align: center;
+        }
+        button {
+          width: 100%;
+          padding: 1rem;
+          border: none;
+          font-weight: bold;
+          background: white;
+          cursor: pointer;
+
+          &:first-child {
+            border-right: 4px solid whitesmoke;
+          }
+        }
+      }
+    }
+    section {
+      display: grid;
+      gap: 1rem;
+      margin: 1rem auto;
+      padding-bottom: 1rem;
+    }
   }
 `;
 export const Card = styled.div`
@@ -495,9 +496,13 @@ export const Card = styled.div`
     }
   }
 
-  .foto {
+  .pick {
     width: 100%;
     height: 300px;
+
+    @media (max-width: 600px) {
+      height: 200px;
+    }
   }
   .comentarios {
     border-top: 1px solid #e4e0e0;
@@ -521,7 +526,6 @@ export const Card = styled.div`
         width: 30px;
         height: 30px;
       }
-
       &:hover {
         background: whitesmoke;
       }
