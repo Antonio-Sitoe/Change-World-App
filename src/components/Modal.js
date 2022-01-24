@@ -32,7 +32,7 @@ function Ajuda() {
       <Cartes>
         <li onClick={() => setState(true)}>Alimentacao</li>
         <li onClick={() => setState(true)}>Financiamento escolar</li>
-        <li onClick={() => setState(true)}>Mantimentos</li>
+        <li onClick={() => setState(true)}>Apoio a dificientes</li>
         <li onClick={() => setState(true)}>Outros</li>
       </Cartes>
       {state && (
@@ -58,7 +58,7 @@ function Financias() {
       <h1>Que tipo de negocio voce quer financiamento?</h1>
       {state === false ? (
         <Cartes>
-          <li onClick={() => setState(true)}>Boladas</li>
+          <li onClick={() => setState(true)}>Agricultura</li>
           <li onClick={() => setState(true)}>Digital</li>
           <li onClick={() => setState(true)}>Vendas de produtos</li>
           <li onClick={() => setState(true)}>Outros</li>
@@ -72,7 +72,11 @@ function Financias() {
           <p>Anexe o seu Plano de Atividade</p>
           <input type='file' name='' id='' />
           <p>Anexe o seu orcamento</p>
-          <input type='file' name='' id='' />
+          <select name="" id="">
+            <option value="">Orcamento para despesas com pessoal</option>
+            <option value="">Orcamento para bens</option>
+            <option value="">Orcamento para Servicos</option>
+          </select>
           <p>Quanto tempo vai durar o projecto</p>
           <input type='number' name='' id='' />
           <textarea
