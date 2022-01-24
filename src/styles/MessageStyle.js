@@ -180,7 +180,7 @@ export const ModalStyle = styled.section`
     display: grid;
     padding: 3rem;
     border-radius: 2px;
-    max-width: 1200px;
+    max-width: 900px;
     width: 100%;
     background: white;
     gap: 1rem;
