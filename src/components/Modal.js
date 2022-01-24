@@ -28,14 +28,7 @@ function Ajuda() {
   const [state, setState] = React.useState(false);
   return (
     <section>
-      <h1>Que tipo de ajuda voce quer?</h1>
-      <Cartes>
-        <li onClick={() => setState(true)}>Alimentacao</li>
-        <li onClick={() => setState(true)}>Financiamento escolar</li>
-        <li onClick={() => setState(true)}>Apoio a dificientes</li>
-        <li onClick={() => setState(true)}>Outros</li>
-      </Cartes>
-      {state && (
+      {state ? (
         <Denu>
           <h1>Descreve bem o que voce precisa</h1>
           <textarea
@@ -47,6 +40,16 @@ function Ajuda() {
           />
           <button>Publicar</button>
         </Denu>
+      ) : (
+        <>
+          <h1>Que tipo de ajuda voce quer?</h1>
+          <Cartes>
+            <li onClick={() => setState(true)}>Alimentacao</li>
+            <li onClick={() => setState(true)}>Financiamento escolar</li>
+            <li onClick={() => setState(true)}>Apoio a dificientes</li>
+            <li onClick={() => setState(true)}>Outros</li>
+          </Cartes>
+        </>
       )}
     </section>
   );
@@ -55,16 +58,7 @@ function Financias() {
   const [state, setState] = React.useState(false);
   return (
     <div>
-      <h1>Que tipo de negocio voce quer financiamento?</h1>
-      {state === false ? (
-        <Cartes>
-          <li onClick={() => setState(true)}>Agricultura</li>
-          <li onClick={() => setState(true)}>Digital</li>
-          <li onClick={() => setState(true)}>Vendas de produtos</li>
-          <li onClick={() => setState(true)}>Outros</li>
-        </Cartes>
-      ) : null}
-      {state && (
+      {state ? (
         <Denu>
           <h1>Detalhes</h1>
           <p>Anexe o seu CV</p>
@@ -72,10 +66,10 @@ function Financias() {
           <p>Anexe o seu Plano de Atividade</p>
           <input type='file' name='' id='' />
           <p>Anexe o seu orcamento</p>
-          <select name="" id="">
-            <option value="">Orcamento para despesas com pessoal</option>
-            <option value="">Orcamento para bens</option>
-            <option value="">Orcamento para Servicos</option>
+          <select name='' id=''>
+            <option value=''>Orcamento para despesas com pessoal</option>
+            <option value=''>Orcamento para bens</option>
+            <option value=''>Orcamento para Servicos</option>
           </select>
           <p>Quanto tempo vai durar o projecto</p>
           <input type='number' name='' id='' />
@@ -88,6 +82,16 @@ function Financias() {
           />
           <button>Enviar para Academia</button>
         </Denu>
+      ) : (
+        <>
+          <h1>Que tipo de negocio voce quer financiamento?</h1>
+          <Cartes>
+            <li onClick={() => setState(true)}>Agricultura</li>
+            <li onClick={() => setState(true)}>Digital</li>
+            <li onClick={() => setState(true)}>Vendas de produtos</li>
+            <li onClick={() => setState(true)}>Outros</li>
+          </Cartes>
+        </>
       )}
     </div>
   );
@@ -112,14 +116,7 @@ function Denuncias() {
   const [state, setState] = React.useState(false);
   return (
     <div>
-      <h1>Que tipo de denuncia voce gostaria de fazer ?</h1>
-      <Cartes>
-        <li onClick={() => setState(true)}>Abuso sexual</li>
-        <li onClick={() => setState(true)}>Abuso de menores</li>
-        <li onClick={() => setState(true)}>Violencia Domestica</li>
-        <li onClick={() => setState(true)}>Maltratos</li>
-      </Cartes>
-      {state && (
+      {state ? (
         <Denu>
           <h1>Contenos como aconteceu</h1>
           <textarea
@@ -131,6 +128,16 @@ function Denuncias() {
           />
           <button>Enviar para Academia</button>
         </Denu>
+      ) : (
+        <>
+          <h1>Que tipo de denuncia voce gostaria de fazer ?</h1>
+          <Cartes>
+            <li onClick={() => setState(true)}>Abuso sexual</li>
+            <li onClick={() => setState(true)}>Abuso de menores</li>
+            <li onClick={() => setState(true)}>Violencia Domestica</li>
+            <li onClick={() => setState(true)}>Maltratos</li>
+          </Cartes>
+        </>
       )}
     </div>
   );

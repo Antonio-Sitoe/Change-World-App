@@ -29,7 +29,7 @@ const AccountOutrem = () => {
             <button onClick={onToogle}>Publicacoes</button>
           </li>
           <li>
-            <Link to=''>Entrar em contacto</Link>
+            <Link to='/App/message'>Entrar em contacto</Link>
           </li>
         </ul>
 
