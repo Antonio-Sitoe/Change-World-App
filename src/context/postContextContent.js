@@ -1,10 +1,18 @@
 import foto from '../assets/perfil.jpg';
+import m from '../assets/m.jpg';
+import m1 from '../assets/m1.jpg';
+import m2 from '../assets/m2.jpg';
+import m3 from '../assets/m3.jpg';
 import modelo from '../assets/modelo.jpg';
+import modelo1 from '../assets/modelo.jpg';
+import modelo2 from '../assets/modelo.jpg';
+import modelo3 from '../assets/modelo.jpg';
+import modelo4 from '../assets/modelo.jpg';
 export const post = [
   {
     user: {
       nome: 'Antonio sitoe',
-      sobre: 'Estudante',
+      sobre: 'Agricultura',
       foto: foto,
     },
     post: {
@@ -33,7 +41,7 @@ export const post = [
     user: {
       nome: 'Suzana sitoe',
       sobre: 'Comerciante',
-      foto: foto,
+      foto: m1,
     },
     post: {
       foto: modelo,
@@ -61,7 +69,7 @@ export const post = [
     user: {
       nome: 'Maria sitoe',
       sobre: 'Comerciante',
-      foto: foto,
+      foto: m,
     },
     post: {
       foto: modelo,
@@ -87,7 +95,7 @@ export const post = [
     user: {
       nome: 'Sonua sitoe',
       sobre: 'Estudante',
-      foto: foto,
+      foto: m2,
     },
     post: {
       foto: modelo,
@@ -115,7 +123,7 @@ export const post = [
     user: {
       nome: 'Antonio sitoe',
       sobre: 'Estudante',
-      foto: foto,
+      foto: m3,
     },
     post: {
       foto: modelo,
