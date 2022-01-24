@@ -59,7 +59,7 @@ Para o arsenal, foi usado a tecnologia para trabalhar com frontend ReactJs.
 
 
 ### LIVE
-<a href="https://github.com/Antonio-Sitoe/HackAthon">HacktAthon Change</a>
+<a href="https://hack-athon-antonio-sitoe.vercel.app/">HacktAthon Change</a>
 
 ### LIVE VIDEO
 https://user-images.githubusercontent.com/72309855/150772091-a5f3cded-13d3-4cec-ba1c-e6dc0cc09ac6.mp4
