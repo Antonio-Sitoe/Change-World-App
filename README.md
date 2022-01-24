@@ -1,5 +1,8 @@
 # Hackathon Change
 
+
+![logo](https://user-images.githubusercontent.com/72309855/150771039-8311362f-01e6-4e67-9bd1-eddc00137040.png)
+
 ### Sobre A Academia de Pesquisa Virtual
 A Academia de Pesquisa Virtual é uma organização de direito privado moçambicano,
 formada por pesquisadores e especialistas de várias áreas, com a missão de assegurar a
@@ -53,3 +56,7 @@ Para o arsenal, foi usado a tecnologia para trabalhar com frontend ReactJs.
 - <b>Pagina de Notificacoes </b> - Listagem de notificacoes. com scrool infinito.
 - <b>Pagina de Perfil do usuario </b>  - Podendo ver a foto, nome do usuario, descricao, lista de publicacoes e lista das denuncias que fez, podendo ver o estado das mesmas.
 - <b>Pagina do outro usuario </b> - Podendo ver a foto, nome do usuario, descricao, lista de publicacoes e um link para ter uma conversa com ele.
+
+
+### LIVE
+<a href="hack-athon-antonio-sitoe.vercel.app">HacktAthon Change</a>
