@@ -65,6 +65,20 @@ Para o arsenal, foi usado a tecnologia para trabalhar com frontend ReactJs.
 https://user-images.githubusercontent.com/72309855/150772091-a5f3cded-13d3-4cec-ba1c-e6dc0cc09ac6.mp4
 
 
+### Clone
 
+```js
+    git clone https://github.com/Antonio-Sitoe/HackAthon.git
+```
+### Instalar
+```js
+    npm install
+```
 
+### Start
+```js
+    npm start
+```
 
+## Redes Sociais
+<a href="https://www.linkedin.com/in/antonio-sitoe-521b64205/">linkedin</a>
